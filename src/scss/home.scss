@@ -1,3 +1,152 @@
 //====================================================================================================
+.main {
+	position: relative;
+	@include adaptiveValue("margin-top", -140, -100);
+	@include adaptiveValue("padding-top", 240, 150);
+	@include adaptiveValue("padding-bottom", 400, 10);
+	color: #fff;
+	text-align: center;
+
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -2;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__container {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 840px;
+			top: 50%;
+			right: 0;
+			transform: translateY(-32%);
+			background: url(../img/main/main-1.png) center right no-repeat;
+			z-index: -1;
+			background-size: contain;
+			display: none;
+
+			@media (max-width:$tablet) {
+				display: none;
+			}
+		}
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__left {
+		flex: 0 1 65%;
+
+		@media (max-width:$tablet) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__left-title {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 45, 26);
+		line-height: 125.9%;
+		text-align: center;
+		@include adaptiveValue("margin-bottom", 26, 15);
+	}
+
+	&__left-subtitle {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: math.div(24, 20);
+		@include adaptiveValue("margin-bottom", 26, 15);
+	}
+
+	&__left-icons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	&__left-btn {}
+
+	&__right {}
+}
+
+.left {
+
+	&__icons {}
+
+	&__icons-item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		z-index: 1;
+		@include adaptiveValue("margin-bottom", 26, 15);
+
+		@media (max-width:$tablet) {
+			flex: 0 1 45%;
+			justify-content: center;
+		}
+
+		@media (max-width:$mobile) {
+			flex: 1 1 48%;
+		}
+
+		&:before {
+			content: '';
+			border: 15px solid #FFFFFF;
+			filter: blur(25px);
+			transform: rotate(0.34deg);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&:not(:last-child) {
+			margin-right: 20px;
+
+			@media (max-width:$mobile) {
+				margin-right: 5px;
+			}
+		}
+
+	}
+}
+
+.icons-item {
+
+	&__img {
+		width: 45px;
+		height: 45px;
+		margin-right: 7px;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__text {
+		max-width: 120px;
+		text-align: left;
+		font-weight: 700;
+		font-size: 15px;
+		line-height: math.div(18, 15);
+	}
+}
+
 
 //====================================================================================================

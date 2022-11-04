@@ -3,11 +3,26 @@
 
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
+	padding: 23px 66px;
+	background-image: linear-gradient(90deg, #00639C 0%, #5CC4FF 100%);
+	box-shadow: 10px 10px 47px #2B90CA;
+	background-size: 150% auto;
+	border-radius: 20px;
+	height: 65px;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	@include adaptiveValue("font-size", 17, 14);
+	text-transform: uppercase;
+	color: #FFFFFF;
+	transition: all 0.3s ease 0s;
+
 	@media (any-hover: hover) {
 		&:hover {
+			background-position: right center;
 		}
 	}
+
 	&._fw {
 		width: 100%;
 	}

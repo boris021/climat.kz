@@ -1,7 +1,8 @@
 //====================================================================================================
 .header {
-	background: #333;
+	// background: #333;
 	@include adaptiveValue("padding-top", 45, 15);
+	// min-height: 84px;
 
 
 	&__container {
@@ -10,31 +11,109 @@
 		justify-content: space-between;
 	}
 
+	&__logotip {}
+
 	&__logo {
 		width: 206px;
 
 		img {
-			width: 100%;
+			width: 70%;
 		}
 	}
 
 	&__menu {}
 
-	&__social {}
+	&__social {
+		@media (max-width:$tablet) {
+			display: flex;
+			justify-content: center;
+			margin-top: 30px;
+		}
+	}
 
-	&__social-link {}
+	&__social-link {
+		filter: drop-shadow(0px 6px 20px rgba(4, 133, 207, 0.72));
+		transition: all 0.3s ease 0s;
 
-	&__phone {}
+		@media (max-width: em(1180)) {
+			display: none;
+		}
+
+		@media (max-width:$tablet) {
+			display: block;
+		}
+
+		&:hover {
+			filter: drop-shadow(0px 6px 10px rgba(4, 133, 207, 0.72));
+		}
+
+		&:not(:last-child) {
+			margin-right: 13px;
+		}
+	}
+
+	&__phone {
+		font-weight: 700;
+		font-size: 22px;
+		color: #FFFFFF;
+		text-align: right;
+		transition: opacity 0.3s ease 0s;
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		@media (max-width:$mobile) {
+			margin-top: 30px;
+			display: block;
+			text-align: center;
+		}
+	}
 }
 
 .menu {
 
-	&__body {}
+	&__body {
+
+		@media (max-width:$tablet) {
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			top: 100px;
+			left: -100%;
+			overflow: auto;
+			background: rgba(0, 0, 0, 0.877);
+			box-shadow: none;
+			padding: 40px 20px;
+			z-index: 4;
+			transition: all 0.3s ease 0s;
+
+			.menu-open & {
+				left: 0;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				position: fixed;
+				height: 70px;
+				width: 100%;
+				top: 0px;
+				left: 0;
+				z-index: 50;
+			}
+		}
+	}
+
 
 	&__list {
 		display: flex;
 		align-items: center;
 		color: #fff;
+
+		@media (max-width:$tablet) {
+			flex-direction: column;
+		}
 	}
 
 	&__item {
@@ -43,12 +122,21 @@
 		line-height: math.div(18, 15);
 		transition: opacity 0.3s ease 0s;
 
+		@media (max-width:$tablet) {
+			font-size: 22px;
+		}
+
 		&:hover {
 			opacity: 0.8;
 		}
 
 		&:not(:last-child) {
 			@include adaptiveValue("margin-right", 40, 15);
+
+			@media (max-width:$tablet) {
+				margin-right: 0;
+				margin-bottom: rem(20);
+			}
 		}
 	}
 
@@ -82,7 +170,7 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: #fff;
 		}
 
 		&::before {
