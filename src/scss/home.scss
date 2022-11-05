@@ -97,6 +97,10 @@
 		align-items: center;
 		justify-content: center;
 		flex-wrap: wrap;
+
+		@media (max-width:$mobile) {
+			margin: 30px 0 20px 0;
+		}
 	}
 
 	&__left-btn {}
@@ -167,5 +171,342 @@
 	}
 }
 
+// advatage ====================================================================================================
+.advatage {
+	position: relative;
+	@include adaptiveValue("margin-top", 100, 40);
+	@include adaptiveValue("margin-bottom", 80, 30);
+	z-index: 1;
 
-//====================================================================================================
+	&::before {
+		content: '';
+		position: absolute;
+		width: 1125px;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: url(../img/advatage/advatage-bg.png) center left no-repeat;
+		z-index: -1;
+
+		@media (max-width:$mobile) {
+			opacity: 0.1;
+		}
+	}
+
+	&__row {
+		display: flex;
+		column-gap: 20px;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@media (max-width:$mobile) {
+			column-gap: 0;
+		}
+
+		@media (max-width:$tablet) {
+			justify-content: center;
+		}
+	}
+
+	&__card {
+		flex: 0 1 30%;
+
+		@media (max-width:$tablet) {
+			flex: 0 1 40%;
+			margin-bottom: 40px;
+		}
+
+		@media (max-width:$mobile) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__card-img {
+		position: relative;
+		border-radius: 10px;
+		max-width: rem(450);
+		@include adaptiveValue("margin-bottom", 37, 25);
+		filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+		transition: all 0.3s ease 0s;
+
+		@media (max-width:$mobile) {
+			margin: auto;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			bottom: -50%;
+			left: 50%;
+			transform: translateX(-50%);
+			background: url(../img/advatage/advatage-icon-1.png) center center no-repeat;
+		}
+
+		&:hover {
+			filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+		}
+
+		img {
+			width: 100%;
+			border-radius: 10px;
+		}
+	}
+
+	&__card-content {
+		text-align: center;
+		margin-top: 70px;
+	}
+
+	&__card-title {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: math.div(24, 20);
+		margin-bottom: 9px;
+	}
+
+	&__card-text {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 17, 14);
+		line-height: math.div(21, 17);
+	}
+}
+
+//========================================================================================================================================================
+.brez {
+	position: relative;
+	@include adaptiveValue("margin-top", 100, 40);
+	@include adaptiveValue("margin-bottom", 80, 30);
+
+	&__bg {
+		position: absolute;
+		width: 299px;
+		top: 0;
+		right: -100px;
+
+		@media (max-width: em(1592)) {
+			width: 15%;
+		}
+
+		@media (max-width:$tablet) {
+			display: none;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__left {
+		flex: 0 1 40%;
+
+		@media (max-width:$tablet) {
+			flex: 0 1 100%;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__right {
+		flex: 0 1 55%;
+		z-index: 5;
+
+		@media (max-width:$tablet) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__right-item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+
+		img {
+			max-width: 50px;
+
+			@media (max-width:$mobile) {
+				width: 30px;
+			}
+
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+	}
+
+	&__right-content {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(20, 16);
+		color: #000000;
+
+		span {
+			display: block;
+			position: relative;
+			margin-left: 20px;
+			z-index: 5;
+
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: 15px;
+				height: 15px;
+				background: #575757;
+				border-radius: 50%;
+				top: 2px;
+				left: -20px;
+			}
+		}
+
+	}
+}
+
+//========================================================================================================================================================
+.product {
+	position: relative;
+	@include adaptiveValue("padding-top", 100, 40);
+	@include adaptiveValue("padding-bottom", 80, 30);
+
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		z-index: -1;
+	}
+
+	// &::after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	width: 248.08px;
+	// 	height: 100%;
+	// 	top: 0;
+	// 	right: 0;
+	// 	background: url(../img/product/product-after.png) right center no-repeat;
+	// }
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		column-gap: 20px;
+		row-gap: 50px;
+	}
+
+	&__card {
+		flex: 0 1 48%;
+		background: #FFFFFF;
+		box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.4);
+		border-radius: 20px;
+	}
+}
+
+.card {
+	position: relative;
+
+	&__label {
+		z-index: 2;
+		position: absolute;
+		width: 75px;
+		height: 75px;
+		top: -35px;
+		right: -35px;
+
+
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 15px 25px;
+	}
+
+	&__icons {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: start;
+
+		span {
+			font-weight: 700;
+			font-size: 16px;
+
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+
+			img {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+
+	&__img {
+		width: 166px;
+		height: 218px;
+		margin: 0 10px;
+		object-fit: cover;
+
+		img {
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		text-align: center;
+	}
+
+	&__content-title {
+		max-width: 270px;
+		margin: auto;
+		font-weight: 800;
+		font-size: 15px;
+		line-height: math.div(18, 15);
+		margin-bottom: 8px;
+
+		span {
+			color: #ED7413;
+		}
+	}
+
+	&__content-text {
+		text-align: left;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: math.div(16, 13);
+		color: #000000;
+
+		span {
+			&:not(:last-child) {
+				margin-bottom: 7px;
+			}
+		}
+	}
+
+	&__line {
+		width: 100%;
+		background-color: #C9C9C9;
+		height: 1px;
+		margin-bottom: 22px;
+	}
+
+	&__btn {
+		margin: auto;
+		padding: 20px;
+	}
+}
