@@ -1,17 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/_head.htm',{
-"title":"Умная приточная вентиляция с кондиционированием и управлением по WI-FI"
-})
+
+<head>
+	<title>Умная приточная вентиляция с кондиционированием и управлением по WI-FI</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20221106162041">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <body>
 	<div class="wrapper">
-		@@include('html/_header.htm',{})
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logotip">
+					<a href="" class="header__logo"><img src="img/main/logo.png" alt="logo"></a>
+				</div>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="" class="menu__link">Главная</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Продукция</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Проекты</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Отзывы</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div data-da=".menu__body, 1180, 2" class="header__social">
+					<a href="#" class="header__social-link"><img src="img/icon/icon-whatsapp.svg" alt="whatsapp"></a>
+					<a href="#" class="header__social-link"><img src="img/icon/icon-telegram.svg" alt="telegram"></a>
+					<a href="#" class="header__social-link"><img src="img/icon/icon-instagram.svg" alt="instagram"></a>
+				</div>
+				<a data-da=".menu__body, 500, 3" href="tel:+77074005068" class="header__phone">+7 707 400 50 68</a>
+			</div>
+		</header>
 		<main class="page">
 
 			<section class="main">
 				<div class="main__bg">
-					<img src="@img/main/main-bg.png" alt="">
+					<img src="img/main/main-bg.png" alt="">
 				</div>
 				<div class="main__container">
 					<div class="main__row">
@@ -21,15 +53,15 @@
 							<div class="main__left-subtitle">Дыши свежим воздухом, с закрытыми окнами</div>
 							<div class="main__left-icons left__icons">
 								<div class="left__icons-item icons-item">
-									<img src="@img/main/main-ic1.svg" alt="" class="icons-item__img">
+									<img src="img/main/main-ic1.svg" alt="" class="icons-item__img">
 									<div class="icons-item__text">Гарантия на товар 3 года</div>
 								</div>
 								<div class="left__icons-item icons-item">
-									<img src="@img/main/main-ic2.svg" alt="" class="icons-item__img">
+									<img src="img/main/main-ic2.svg" alt="" class="icons-item__img">
 									<div class="icons-item__text">Установим за 3 часа</div>
 								</div>
 								<div class="left__icons-item icons-item">
-									<img src="@img/main/main-ic3.svg" alt="" class="icons-item__img">
+									<img src="img/main/main-ic3.svg" alt="" class="icons-item__img">
 									<div class="icons-item__text">Подарок за покупку</div>
 								</div>
 							</div>
@@ -37,7 +69,7 @@
 						</div>
 						<div class="main__right">
 							<div class="main__right__image-ibg">
-								<!-- <img src="@img/main/main-1.png" alt="main"></div> -->
+								<!-- <img src="img/main/main-1.png" alt="main"></div> -->
 							</div>
 						</div>
 					</div>
@@ -49,7 +81,7 @@
 					<div class="advatage__row">
 						<div class="advatage__card">
 							<div class="advatage__card-img">
-								<img src="@img/advatage/advatage-1.jpg" alt="">
+								<img src="img/advatage/advatage-1.jpg" alt="">
 							</div>
 							<div class="advatage__card-content">
 								<div class="advatage__card-title">Чистый и свежий воздух</div>
@@ -59,7 +91,7 @@
 						</div>
 						<div class="advatage__card">
 							<div class="advatage__card-img">
-								<img src="@img/advatage/advatage-2.jpg" alt="">
+								<img src="img/advatage/advatage-2.jpg" alt="">
 							</div>
 							<div class="advatage__card-content">
 								<div class="advatage__card-title">Ионизация воздуха</div>
@@ -70,7 +102,7 @@
 						</div>
 						<div class="advatage__card">
 							<div class="advatage__card-img">
-								<img src="@img/advatage/advatage-3.jpg" alt="">
+								<img src="img/advatage/advatage-3.jpg" alt="">
 							</div>
 							<div class="advatage__card-content">
 								<div class="advatage__card-title">Экономия затрат на электричество</div>
@@ -85,26 +117,23 @@
 
 			<section class="brez">
 				<div class="brez__bg">
-					<img src="@img/brez/brez-bg.png" alt="brez">
+					<img src="img/brez/brez-bg.png" alt="brez">
 				</div>
 				<div class="brez__container">
 					<h2 class="brez__title title">Приточно-очистительный комплекс <span>BREZZA</span></h2>
 					<div class="brez__row">
 						<div class="brez__left">
 							<div class="brez__left-video">
-								<iframe width="100%" height="355" src="https://www.youtube.com/embed/u3pcO4v_OWw"
-									title="YouTube video player" frameborder="0"
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-									allowfullscreen></iframe>
+								<iframe width="100%" height="355" src="https://www.youtube.com/embed/u3pcO4v_OWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>
 						</div>
 						<div class="brez__right">
 							<div class="brez__right-item">
-								<img src="@img/brez/brez-ic-1.svg" alt="icon">
-								<img src="@img/brez/brez-ic-2.svg" alt="icon">
-								<img src="@img/brez/brez-ic-3.svg" alt="icon">
-								<img src="@img/brez/brez-ic-4.svg" alt="icon">
-								<img src="@img/brez/brez-ic-5.svg" alt="icon">
+								<img src="img/brez/brez-ic-1.svg" alt="icon">
+								<img src="img/brez/brez-ic-2.svg" alt="icon">
+								<img src="img/brez/brez-ic-3.svg" alt="icon">
+								<img src="img/brez/brez-ic-4.svg" alt="icon">
+								<img src="img/brez/brez-ic-5.svg" alt="icon">
 							</div>
 							<div class="brez__right-content">
 								<span>Встроенный Wi-Fi модуль для управления с мобильных устройств</span>
@@ -126,26 +155,26 @@
 
 			<section class="product">
 				<div class="product__bg">
-					<img src="@img/product/product-bg.jpg" alt="brez">
+					<img src="img/product/product-bg.jpg" alt="brez">
 				</div>
 				<div class="product__container">
 					<h2 class="product__title title">Продукция</h2>
 					<div class="product__row">
 						<div class="product__card card">
 							<div class="card__label">
-								<img src="@img/product/label-1.svg" alt="label">
+								<img src="img/product/label-1.svg" alt="label">
 							</div>
 							<div class="card__top">
 								<div class="card__icons">
-									<span><img src="@img/brez/brez-ic-1.svg" alt=""></span>
-									<span><img src="@img/brez/brez-ic-2.svg" alt=""></span>
-									<span><img src="@img/brez/brez-ic-3.svg" alt=""></span>
-									<span><img src="@img/brez/brez-ic-4.svg" alt=""></span>
-									<span><img src="@img/brez/brez-ic-5.svg" alt=""></span>
+									<span><img src="img/brez/brez-ic-1.svg" alt=""></span>
+									<span><img src="img/brez/brez-ic-2.svg" alt=""></span>
+									<span><img src="img/brez/brez-ic-3.svg" alt=""></span>
+									<span><img src="img/brez/brez-ic-4.svg" alt=""></span>
+									<span><img src="img/brez/brez-ic-5.svg" alt=""></span>
 									<span>30-60м2</span>
 								</div>
 								<div class="card__img">
-									<img src="@img/product/pr1.png" alt="product">
+									<img src="img/product/pr1.png" alt="product">
 								</div>
 								<div class="card__content">
 									<div class="card__content-title">Приточно-очистительный комплекс <span>BREZZA RCB 150
@@ -169,15 +198,15 @@
 						<div class="product__card card">
 							<div class="card__top">
 								<div class="card__icons">
-									<span><img src="@img/product/pr-icon-1.svg" alt=""></span>
-									<span><img src="@img/brez/brez-ic-2.svg" alt=""></span>
-									<span><img src="@img/product/pr-icon-2.svg" alt=""></span>
-									<span><img src="@img/brez/brez-ic-3.svg" alt=""></span>
-									<span><img src="@img/brez/brez-ic-4.svg" alt=""></span>
+									<span><img src="img/product/pr-icon-1.svg" alt=""></span>
+									<span><img src="img/brez/brez-ic-2.svg" alt=""></span>
+									<span><img src="img/product/pr-icon-2.svg" alt=""></span>
+									<span><img src="img/brez/brez-ic-3.svg" alt=""></span>
+									<span><img src="img/brez/brez-ic-4.svg" alt=""></span>
 									<span>до 25м2</span>
 								</div>
 								<div class="card__img">
-									<img src="@img/product/pr2.png" alt="product">
+									<img src="img/product/pr2.png" alt="product">
 								</div>
 								<div class="card__content">
 									<div class="card__content-title">Приточно-очистительный комплекс <span>BREZZA XS RCB
@@ -199,19 +228,19 @@
 						</div>
 						<div class="product__card card">
 							<div class="card__label">
-								<img src="@img/product/label-2.svg" alt="label">
+								<img src="img/product/label-2.svg" alt="label">
 							</div>
 							<div class="card__top">
 								<div class="card__icons">
-									<span><img src="@img/product/pr-icon-3.svg" alt=""></span>
-									<span><img src="@img/product/pr-icon-4.svg" alt=""></span>
-									<span><img src="@img/product/pr-icon-2.svg" alt=""></span>
-									<span><img src="@img/product/pr-icon-5.svg" alt=""></span>
-									<span><img src="@img/brez/brez-ic-2.svg" alt=""></span>
-									<span><img src="@img/brez/brez-ic-5.svg" alt=""></span>
+									<span><img src="img/product/pr-icon-3.svg" alt=""></span>
+									<span><img src="img/product/pr-icon-4.svg" alt=""></span>
+									<span><img src="img/product/pr-icon-2.svg" alt=""></span>
+									<span><img src="img/product/pr-icon-5.svg" alt=""></span>
+									<span><img src="img/brez/brez-ic-2.svg" alt=""></span>
+									<span><img src="img/brez/brez-ic-5.svg" alt=""></span>
 								</div>
 								<div class="card__img">
-									<img src="@img/product/pr3.png" alt="product">
+									<img src="img/product/pr3.png" alt="product">
 								</div>
 								<div class="card__content">
 									<div class="card__content-title">Инверторная сплит-система+бризер <span>ROYAL FRESH Full DC
@@ -234,17 +263,18 @@
 						<div class="product__card card">
 							<div class="card__top">
 								<div class="card__icons">
-									<span><img src="@img/product/pr-icon-6.svg" alt=""></span>
-									<span><img src="@img/brez/brez-ic-3.svg" alt=""></span>
-									<span><img src="@img/brez/brez-ic-2.svg" alt=""></span>
-									<span><img src="@img/product/pr-icon-7.svg" alt=""></span>
+									<span><img src="img/product/pr-icon-6.svg" alt=""></span>
+									<span><img src="img/brez/brez-ic-3.svg" alt=""></span>
+									<span><img src="img/brez/brez-ic-2.svg" alt=""></span>
+									<span><img src="img/product/pr-icon-7.svg" alt=""></span>
 								</div>
 								<div class="card__img">
-									<img src="@img/product/pr4.png" alt="product">
+									<img src="img/product/pr4.png" alt="product">
 								</div>
 								<div class="card__content">
 									<div class="card__content-title">Приточно-вытяжная установка с рекуперацией тепла
-										<span>SOFFIO PRIMO </span></div>
+										<span>SOFFIO PRIMO </span>
+									</div>
 									<div class="card__content-text">
 										<span>Эффективность рекуперации до <strong>92%</strong></span>
 										<span>Увлажнение приточного воздуха благодаря гидрофильному покрытию мембранного
@@ -263,12 +293,12 @@
 
 			<section class="air">
 				<div class="air__bg">
-					<img src="@img/air/air-bg.png" alt="">
+					<img src="img/air/air-bg.png" alt="">
 				</div>
 				<div class="air__container">
 					<div class="air__left">
 						<div class="air__left-img">
-							<img src="@img/air/air-img.png" alt="">
+							<img src="img/air/air-img.png" alt="">
 						</div>
 					</div>
 					<div class="air__right">
@@ -281,10 +311,22 @@
 			</section>
 
 		</main>
-		@@include('html/_footer.htm',{})
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
 	</div>
-	@@include('html/_popup.htm',{})
-	@@include('html/_js.htm',{})
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<script src="js/app.min.js?_v=20221106162041"></script>
 </body>
 
 </html>

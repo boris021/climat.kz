@@ -386,17 +386,27 @@
 		top: 0;
 		right: 0;
 		z-index: -1;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
 	}
 
-	// &::after {
-	// 	content: '';
-	// 	position: absolute;
-	// 	width: 248.08px;
-	// 	height: 100%;
-	// 	top: 0;
-	// 	right: 0;
-	// 	background: url(../img/product/product-after.png) right center no-repeat;
-	// }
+	&__title {
+		margin-bottom: 70px;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 248.08px;
+		height: 100%;
+		top: 0;
+		right: 0;
+		background: url(../img/product/product-after.png) right center no-repeat;
+		z-index: 1;
+	}
 
 	&__row {
 		display: flex;
@@ -404,6 +414,7 @@
 		justify-content: space-between;
 		column-gap: 20px;
 		row-gap: 50px;
+		z-index: 2;
 	}
 
 	&__card {
@@ -411,6 +422,7 @@
 		background: #FFFFFF;
 		box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.4);
 		border-radius: 20px;
+		z-index: 2;
 
 		@media (max-width: em(1221)) {
 			flex: 1 1 100%;
@@ -429,6 +441,9 @@
 		top: -35px;
 		right: -35px;
 
+		@media (max-width:$mobile) {
+			right: -10px;
+		}
 
 	}
 
@@ -437,6 +452,10 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 15px 25px;
+
+		@media (max-width:$mobile) {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__icons {
@@ -471,6 +490,12 @@
 		height: 216px;
 		margin: 0 auto;
 
+		@media (max-width:$mobile) {
+			margin-bottom: 30px;
+			height: auto;
+			margin: auto;
+		}
+
 		img {
 			width: 100%;
 			height: 100%;
@@ -491,6 +516,12 @@
 		line-height: math.div(18, 15);
 		margin-bottom: 8px;
 
+		@media (max-width:$mobile) {
+			max-width: none;
+			text-align: center;
+			margin-top: 20px;
+		}
+
 		span {
 			color: #ED7413;
 		}
@@ -504,6 +535,10 @@
 		font-size: 13px;
 		line-height: math.div(16, 13);
 		color: #000000;
+
+		@media (max-width:$mobile) {
+			min-height: 0;
+		}
 
 		& span {
 			&:not(:last-child) {
@@ -531,4 +566,74 @@
 		color: #FFFFFF;
 		margin-bottom: 25px;
 	}
+}
+
+//========================================================================================================================================================
+.air {
+	position: relative;
+	@include adaptiveValue("margin-top", 100, 40);
+	@include adaptiveValue("margin-bottom", 80, 30);
+
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		z-index: -1;
+
+		img {
+			width: 100%;
+			// height: 100%;
+		}
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__left {
+		flex: 0 1 40%;
+		position: relative;
+
+		&-img {
+			position: absolute;
+			// width: 100%;
+			// height: 100%;
+			top: 50%;
+			left: 0;
+		}
+	}
+
+	&__right {
+		flex: 0 1 55%;
+		color: #FFFFFF;
+		font-weight: 800;
+	}
+
+	&__right-text {
+		@include adaptiveValue("font-size", 30, 20);
+		line-height: math.div(37, 30);
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+
+	&__right-subtitle {
+		@include adaptiveValue("font-size", 30, 20);
+		line-height: math.div(37, 30);
+		margin-bottom: 25px;
+	}
+
+	&__right-title {
+		font-size: 50px;
+		@include adaptiveValue("font-size", 50, 36);
+		line-height: math.div(61, 50);
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+
+	&__right-btn {}
 }
