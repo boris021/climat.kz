@@ -1559,6 +1559,7 @@ body::after {
 
 .arrow-down {
   margin: 30px;
+  display: none;
 }
 
 .arrow-down span {
