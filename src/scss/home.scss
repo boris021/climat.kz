@@ -367,6 +367,12 @@
 				border-radius: 50%;
 				top: 2px;
 				left: -20px;
+
+				@media (max-width:$mobile) {
+					width: 10px;
+					height: 10px;
+					top: 4px;
+				}
 			}
 		}
 
@@ -506,6 +512,10 @@
 	&__content {
 		text-align: center;
 		margin-left: 15px;
+
+		@media (max-width:$mobile) {
+			margin-left: 0;
+		}
 	}
 
 	&__content-title {
@@ -807,10 +817,6 @@
 
 	&__left {
 		flex: 0 1 45%;
-
-		@media (max-width:$tablet) {
-			display: none;
-		}
 	}
 
 	&__left-img {
@@ -856,4 +862,138 @@
 	}
 
 	&__right-btn {}
+}
+
+//========================================================================================================================================================
+.home {
+	position: relative;
+	@include adaptiveValue("margin-top", 100, 60);
+
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	&__title {
+		margin-bottom: 10px;
+	}
+
+	&__subtitle {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 48, 24);
+		line-height: math.div(59, 48);
+		text-align: center;
+	}
+
+	&__text {
+		text-align: center;
+		font-weight: 600;
+		@include adaptiveValue("font-size", 24, 16);
+		line-height: math.div(29, 24);
+		margin-top: 10px;
+		@include adaptiveValue("margin-bottom", 50, 30);
+	}
+
+	&__row {
+		position: relative;
+	}
+
+	&__slider {
+		position: relative;
+
+		&-btn {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+
+			@media (max-width:$tablet) {
+				display: none;
+			}
+		}
+	}
+
+
+	&__slide-video {
+		width: 329px;
+		height: 487px;
+		margin: auto;
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	background: #ED7413;
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.13) !important;
+	width: 35px !important;
+	height: 35px !important;
+	border-radius: 50%;
+
+	&::after {
+		content: '';
+		font-size: 12px !important;
+		color: #fff;
+	}
+}
+
+.swiper-button-prev {
+	left: -50px !important;
+
+	@media (max-width: em(1499)) {
+		left: -15px !important;
+	}
+}
+
+.swiper-button-next {
+	right: -50px !important;
+
+	@media (max-width: em(1499)) {
+		right: -15px !important;
+	}
+}
+
+//========================================================================================================================================================
+.feedback {
+	position: relative;
+
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	&__row {
+		position: relative;
+	}
+
+	&__title {
+		@include adaptiveValue("margin-top", 80, 40);
+	}
+
+	&__slider {
+		// position: relative;
+
+		&-btn {}
+	}
+
+	&__slide-video {
+		width: 329px;
+		height: 487px;
+		margin: 0 auto;
+	}
+
+	&__slider-btn {
+		// position: relative;
+	}
+}
+
+.swiper1 {
+	overflow: hidden;
 }
