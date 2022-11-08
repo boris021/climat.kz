@@ -1,17 +1,13 @@
 //====================================================================================================
 .header {
-	// background: #333;
 	@include adaptiveValue("padding-top", 45, 15);
-	// min-height: 84px;
-
+	z-index: 10;
 
 	&__container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
-
-	&__logotip {}
 
 	&__logo {
 		width: 206px;
