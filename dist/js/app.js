@@ -6715,6 +6715,16 @@
                     nextEl: ".swiper-button-next"
                 },
                 breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        autoHeight: true
+                    },
+                    365: {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        autoHeight: true
+                    },
                     425: {
                         slidesPerView: 1,
                         spaceBetween: 0,
@@ -6749,10 +6759,20 @@
                 speed: 800,
                 loop: true,
                 navigation: {
-                    prevEl: ".swiper-button-prev",
-                    nextEl: ".swiper-button-next"
+                    prevEl: ".swiper-button-prev1",
+                    nextEl: ".swiper-button-next1"
                 },
                 breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        autoHeight: true
+                    },
+                    365: {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        autoHeight: true
+                    },
                     425: {
                         slidesPerView: 1,
                         spaceBetween: 0,

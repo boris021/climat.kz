@@ -51,6 +51,16 @@ function initSliders() {
 
 			// Брейкпоинты
 			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				365: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
 				425: {
 					slidesPerView: 1,
 					spaceBetween: 0,
@@ -95,12 +105,22 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev1',
+				nextEl: '.swiper-button-next1',
 			},
 
 			// Брейкпоинты
 			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				365: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
 				425: {
 					slidesPerView: 1,
 					spaceBetween: 0,
